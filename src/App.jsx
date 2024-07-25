@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <section>
+      <section className='container-do-conteudo'>
         <NavBar></NavBar>
         <Tarefas></Tarefas>
       </section>
