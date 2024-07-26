@@ -11,7 +11,7 @@ function Botao(props){
       }[props.nome];
 
     return (
-        <button>
+        <button className="btn-principal">
             <IconComponent></IconComponent>
             <span> {props.texto} </span>
         </button>
