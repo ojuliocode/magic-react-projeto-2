@@ -1,0 +1,23 @@
+@import '../../var.css';
+
+.header {
+    display: flex;
+    color: white;
+    background-color: var(--main-color);
+    padding: 20px;
+    justify-content: center;
+    
+}
+
+.titulo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    gap: 30px;
+}
+
+.perfil {
+    display: flex;
+}
