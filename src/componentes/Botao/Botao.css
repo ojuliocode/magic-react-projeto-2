@@ -7,9 +7,12 @@
     padding: 15px;
     align-items: center;
     border: none;
-    background-color: var(--main-color);
+    background-color: transparent;
     color:white;
     cursor: pointer;
+    font-size: 18px;
+    width: 100%; /* Ensure the width is auto */
+    white-space: nowrap; /* Prevent text from breaking */
 }
 
 .btn-principal:hover {

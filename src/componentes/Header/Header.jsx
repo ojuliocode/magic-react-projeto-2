@@ -9,13 +9,6 @@ function Header(){
             <CheckCircle color="success" sx={{fontSize: 50}}></CheckCircle>
             <h1>Tarefas App</h1>
             </section>
-            <section className="perfil">
-                <div>
-                    <h3>João césar</h3>
-                    <span>joaocesar@gmail.com</span>
-                </div>
-                <AccountCircle sx={{fontSize: 50}}></AccountCircle>
-            </section>
         </header>
     )
 }

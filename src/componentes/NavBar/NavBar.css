@@ -5,4 +5,5 @@
     flex-direction: column;
     background-color: var(--main-color);
     height: 100vh;
+    align-items: flex-start; /* Add this line */
 }

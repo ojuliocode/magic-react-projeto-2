@@ -12,7 +12,7 @@ function App() {
       <Header></Header>
       <section className='container-do-conteudo'>
         <NavBar></NavBar>
-        <Tarefas></Tarefas>
+        <Tarefas titulo="Para hoje"></Tarefas>
       </section>
     </>
   )

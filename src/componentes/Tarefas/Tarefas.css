@@ -1,0 +1,21 @@
+.tarefas-wrapper {
+  background-color: #1D233D;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarefas {
+  background-color: #2E4260;
+  width: 80%;
+  height: 80%;
+  border-radius: 20px;
+  padding: 30px;
+  color: white;
+}
+
+
+.dashed-line {
+  border-top: 1px dashed black;
+}
