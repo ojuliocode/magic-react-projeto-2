@@ -85,7 +85,7 @@
 }
 
 
-.btn-principal {
+.btn-principal, .btn-principal-selected{
     display: flex;
     justify-content: start;
     gap: 10px;
@@ -98,9 +98,12 @@
     width: 100%;
     white-space: nowrap;
 }
+.btn-principal-selected{
+    background-color: var(--third-color);
+}
 
-.btn-principal:hover {
-    background-color: var(--second-color);
+.btn-principal:hover  {
+    background-color: var(--third-color);
 }
 
 .main-content {
