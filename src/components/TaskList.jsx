@@ -1,5 +1,5 @@
 // src/components/TaskList.js
-import { RadioButtonChecked, RadioButtonUnchecked, Star, StarBorderOutlined } from '@mui/icons-material';
+import { Delete, RadioButtonChecked, RadioButtonUnchecked, Star, StarBorderOutlined } from '@mui/icons-material';
 import React from 'react';
 
 const TaskList = ({ tasks, onToggleComplete, onToggleFavorite, onDelete }) => {
@@ -27,7 +27,7 @@ const TaskList = ({ tasks, onToggleComplete, onToggleFavorite, onDelete }) => {
                             {task.favorite ? <Star /> : <StarBorderOutlined />}
                         </div>
                         <div onClick={() => onDelete(task.id)}>
-
+                            <Delete />
                         </div>
                     </section>
                 </li>
