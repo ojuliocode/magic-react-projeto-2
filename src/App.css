@@ -124,3 +124,20 @@ input {
     display: flex;
     gap: 10px;
 }
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--main-color);
+    position: sticky;
+    gap: 20px;
+}
+
+.icone-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

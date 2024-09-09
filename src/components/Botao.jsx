@@ -20,10 +20,11 @@ function Botao(props) {
 
             {
                 props.rota ? <Link
-                    style={{width: '100%', color: 'white', textDecoration: 'none',textAlign: 'start' , display: 'flex',
+                    style={{
+                        width: '100%', color: 'white', textDecoration: 'none', textAlign: 'start', display: 'flex',
                         alignItems: 'center',
-                         gap: '20px',
-                         padding: '10px'
+                        gap: '20px',
+                        padding: '10px'
                     }}
                     to={props.rota}>
 
