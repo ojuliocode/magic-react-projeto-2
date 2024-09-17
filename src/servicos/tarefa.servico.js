@@ -4,8 +4,8 @@ export const getTarefas = () => {
 }
 
 export const adicionar = (tarefa, tarefas, setTarefas) => {
-    const newTarefas = [...tarefas, { id: Date.now(), ...tarefa }]
-    setTarefas(newTarefas);
+    const novasTarefasLocal = [...tarefas, tarefa]
+    setTarefas(novasTarefasLocal);
     
     const todasAsTarefas = getTarefas()
     const todasAsTarefasComANova = [...todasAsTarefas, tarefa]
@@ -13,10 +13,10 @@ export const adicionar = (tarefa, tarefas, setTarefas) => {
 };
 
 export const inverterCompleta = (id, tarefas, setTarefas) => {
-    const newTarefas = tarefas.map(tarefa =>
+    const novasTarefasLocal = tarefas.map(tarefa =>
         tarefa.id === id ? { ...tarefa, completa: !tarefa.completa } : tarefa
     )
-    setTarefas(newTarefas);
+    setTarefas(novasTarefasLocal);
     const todasAsTarefas = getTarefas()
     const todasAsTarefasComACompletaInvertida = todasAsTarefas.map(tarefa =>
         tarefa.id === id ? { ...tarefa, completa: !tarefa.completa } : tarefa
@@ -25,10 +25,10 @@ export const inverterCompleta = (id, tarefas, setTarefas) => {
 };
 
 export const inverterFavorita = (id, tarefas, setTarefas) => {
-    const newTarefas = tarefas.map(tarefa =>
+    const novasTarefasLocal = tarefas.map(tarefa =>
         tarefa.id === id ? { ...tarefa, favorita: !tarefa.favorita } : tarefa
     )
-    setTarefas(newTarefas);
+    setTarefas(novasTarefasLocal);
     const todasAsTarefas = getTarefas()
     const todasAsTarefasComAFavoritaInvertida = todasAsTarefas.map(tarefa =>
         tarefa.id === id ? { ...tarefa, favorita: !tarefa.favorita } : tarefa
