@@ -35,7 +35,15 @@ const FavoriteTarefas = () => {
     };
 
     const deleteTarefa = (id) => {
+        const todasAsTarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
+        
+        // Local
         setTarefas(tarefas.filter(tarefa => tarefa.id !== id));
+
+        const todasAsTarefasSemADeletada = todasAsTarefas.filter(tarefa => tarefa.id !== id)
+        
+        localStorage.setItem('tarefas', JSON.stringify(todasAsTarefasSemADeletada));
+
     };
 
     return (
