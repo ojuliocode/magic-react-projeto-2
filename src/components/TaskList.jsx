@@ -4,7 +4,7 @@ import React from 'react';
 
 const TaskList = ({ tasks, onToggleComplete, onToggleFavorite, onDelete }) => {
     return (
-        <ul className='tarefas'>
+        <ul className='tarefas-lista'>
             {tasks.map(task => (
                 <li className='tarefa-unica' key={task.id}>
                     <section className='icone-titulo' onClick={() => onToggleComplete(task.id)}>
