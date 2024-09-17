@@ -1,13 +1,16 @@
 
 import React, { useState } from 'react';
 
-const TarefaForm = ({ onAddTarefa }) => {
+const TarefaForm = ({ onAddTarefa, tipo, tarefas, setTarefas }) => {
     const [title, setTitle] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (title.trim()) {
-            onAddTarefa({ title, completa: false, favorite: false });
+            let tarefa = {title, completa: false, favorite: false}
+            if(tipo == 'completa') tarefa.completa = true ;
+            if(tipo == 'favorita') tarefa.favorite = true;
+            onAddTarefa(tarefa, tarefas, setTarefas);
             setTitle('');
         }
     };
