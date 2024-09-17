@@ -19,7 +19,7 @@ const TarefaList = ({ tarefas, aoMudarComplete, aoMudarFavorite, aoDeletar, setT
                             style={{ textDecoration: tarefa.completa ? 'line-through' : 'none' }}
 
                         >
-                            {tarefa.title}
+                            {tarefa.titulo}
                         </span>
                     </section>
                     <section className='actions'>

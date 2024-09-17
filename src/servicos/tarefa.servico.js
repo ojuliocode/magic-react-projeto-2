@@ -6,7 +6,10 @@ export const getTarefas = () => {
 export const adicionar = (tarefa, tarefas, setTarefas) => {
     const newTarefas = [...tarefas, { id: Date.now(), ...tarefa }]
     setTarefas(newTarefas);
-    localStorage.setItem('tarefas', JSON.stringify(newTarefas));
+    
+    const todasAsTarefas = getTarefas()
+    const todasAsTarefasComANova = [...todasAsTarefas, tarefa]
+    localStorage.setItem('tarefas', JSON.stringify(todasAsTarefasComANova));
 };
 
 export const inverterCompleta = (id, tarefas, setTarefas) => {
