@@ -1,4 +1,4 @@
-// src/components/TaskForm.js
+
 import React, { useState } from 'react';
 
 const TaskForm = ({ onAddTask }) => {
@@ -7,7 +7,7 @@ const TaskForm = ({ onAddTask }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (title.trim()) {
-            onAddTask({ title, completed: false, favorite: false });
+            onAddTask({ title, completa: false, favorite: false });
             setTitle('');
         }
     };

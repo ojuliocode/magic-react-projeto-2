@@ -1,4 +1,4 @@
-// src/pages/FavoriteTasks.js
+
 import React, { useState, useEffect } from 'react';
 import TaskList from '../components/TaskList';
 import TaskForm from '../components/TaskForm';
@@ -18,7 +18,7 @@ const FavoriteTasks = () => {
 
     const toggleComplete = (id) => {
         const editedTasks = tasks.map(task =>
-            task.id === id ? { ...task, completed: !task.completed } : task
+            task.id === id ? { ...task, completa: !task.completa } : task
         )
         setTasks(editedTasks);
 

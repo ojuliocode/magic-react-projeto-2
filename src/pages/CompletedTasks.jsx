@@ -1,4 +1,4 @@
-// src/pages/CompletedTasks.js
+
 import React, { useState, useEffect } from 'react';
 import TaskList from '../components/TaskList';
 import TaskForm from '../components/TaskForm';
@@ -6,19 +6,19 @@ import TaskForm from '../components/TaskForm';
 const CompletedTasks = () => {
     const [tasks, setTasks] = useState([]);
     const addTask = (task) => {
-        task.completed = true
+        task.completa = true
         const newTasks = [...tasks, { id: Date.now(), ...task }]
         setTasks(newTasks);
         localStorage.setItem('tasks', JSON.stringify(newTasks));
     };
     useEffect(() => {
         const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
-        setTasks(storedTasks.filter(task => task.completed));
+        setTasks(storedTasks.filter(task => task.completa));
     }, []);
 
     const toggleComplete = (id) => {
         const editedTasks = tasks.map(task =>
-            task.id === id ? { ...task, completed: !task.completed } : task
+            task.id === id ? { ...task, completa: !task.completa } : task
         )
         setTasks(editedTasks);
 

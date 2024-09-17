@@ -1,4 +1,4 @@
-// src/components/TaskList.js
+
 import { Delete, RadioButtonChecked, RadioButtonUnchecked, Star, StarBorderOutlined } from '@mui/icons-material';
 import React from 'react';
 
@@ -10,13 +10,13 @@ const TaskList = ({ tasks, onToggleComplete, onToggleFavorite, onDelete }) => {
                     <section className='icone-titulo' onClick={() => onToggleComplete(task.id)}>
 
                         {
-                            task.completed ?
+                            task.completa ?
                                 <RadioButtonChecked />
                                 :
                                 <RadioButtonUnchecked />
                         }
                         <span
-                            style={{ textDecoration: task.completed ? 'line-through' : 'none' }}
+                            style={{ textDecoration: task.completa ? 'line-through' : 'none' }}
 
                         >
                             {task.title}

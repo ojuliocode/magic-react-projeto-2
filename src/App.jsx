@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
@@ -21,7 +20,7 @@ const App = () => {
                 <div className="main-content">
                     <Routes>
                         <Route path="/" element={<AllTasks />} />
-                        <Route path="/completed" element={<CompletedTasks />} />
+                        <Route path="/completas" element={<CompletedTasks />} />
                         <Route path="/favorites" element={<FavoriteTasks />} />
                     </Routes>
                 </div>

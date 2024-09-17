@@ -1,4 +1,4 @@
-// src/pages/AllTasks.js
+
 import React, { useState, useEffect } from 'react';
 import TaskList from '../components/TaskList';
 import TaskForm from '../components/TaskForm';
@@ -24,7 +24,7 @@ const AllTasks = () => {
 
     const toggleComplete = (id) => {
         const newTasks = tasks.map(task =>
-            task.id === id ? { ...task, completed: !task.completed } : task
+            task.id === id ? { ...task, completa: !task.completa } : task
         )
         setTasks(newTasks);
         localStorage.setItem('tasks', JSON.stringify(newTasks));
