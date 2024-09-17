@@ -1,19 +1,19 @@
 
 import React, { useState } from 'react';
 
-const TaskForm = ({ onAddTask }) => {
+const TarefaForm = ({ onAddTarefa }) => {
     const [title, setTitle] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (title.trim()) {
-            onAddTask({ title, completa: false, favorite: false });
+            onAddTarefa({ title, completa: false, favorite: false });
             setTitle('');
         }
     };
 
     return (
-        <form className='task-form' onSubmit={handleSubmit}>
+        <form className='tarefa-form' onSubmit={handleSubmit}>
             <input
                 type="text"
                 value={title}
@@ -25,4 +25,4 @@ const TaskForm = ({ onAddTask }) => {
     );
 };
 
-export default TaskForm;
+export default TarefaForm;

@@ -110,7 +110,7 @@
     width: 100vw;
 }
 
-.tasks {
+.tarefas {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -146,7 +146,7 @@ input {
     scale:calc(1.1)
 }
 
-.task-form {
+.tarefa-form {
     display: flex;
     gap: 10px;
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
-import AllTasks from './pages/AllTasks';
-import CompletedTasks from './pages/CompletedTasks';
-import FavoriteTasks from './pages/FavoriteTasks';
+import AllTarefas from './pages/AllTarefas';
+import CompletedTarefas from './pages/CompletedTarefas';
+import FavoriteTarefas from './pages/FavoriteTarefas';
 import { CheckCircle } from '@mui/icons-material';
 
 
@@ -19,9 +19,9 @@ const App = () => {
                 <Sidebar />
                 <div className="main-content">
                     <Routes>
-                        <Route path="/" element={<AllTasks />} />
-                        <Route path="/completas" element={<CompletedTasks />} />
-                        <Route path="/favorites" element={<FavoriteTasks />} />
+                        <Route path="/" element={<AllTarefas />} />
+                        <Route path="/completas" element={<CompletedTarefas />} />
+                        <Route path="/favorites" element={<FavoriteTarefas />} />
                     </Routes>
                 </div>
             </div>

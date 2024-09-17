@@ -11,7 +11,7 @@ function Botao(props) {
         calendar: CalendarMonth,
         star: Star,
         check: Check,
-        tasks: CheckBoxRounded
+        tarefas: CheckBoxRounded
     }[props.nome];
 
     return (

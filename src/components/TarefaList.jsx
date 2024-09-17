@@ -2,31 +2,31 @@
 import { Delete, RadioButtonChecked, RadioButtonUnchecked, Star, StarBorderOutlined } from '@mui/icons-material';
 import React from 'react';
 
-const TaskList = ({ tasks, onToggleComplete, onToggleFavorite, onDelete }) => {
+const TarefaList = ({ tarefas, onToggleComplete, onToggleFavorite, onDelete }) => {
     return (
         <ul className='tarefas-lista'>
-            {tasks.map(task => (
-                <li className='tarefa-unica' key={task.id}>
-                    <section className='icone-titulo' onClick={() => onToggleComplete(task.id)}>
+            {tarefas.map(tarefa => (
+                <li className='tarefa-unica' key={tarefa.id}>
+                    <section className='icone-titulo' onClick={() => onToggleComplete(tarefa.id)}>
 
                         {
-                            task.completa ?
+                            tarefa.completa ?
                                 <RadioButtonChecked />
                                 :
                                 <RadioButtonUnchecked />
                         }
                         <span
-                            style={{ textDecoration: task.completa ? 'line-through' : 'none' }}
+                            style={{ textDecoration: tarefa.completa ? 'line-through' : 'none' }}
 
                         >
-                            {task.title}
+                            {tarefa.title}
                         </span>
                     </section>
                     <section className='actions'>
-                        <div onClick={() => onToggleFavorite(task.id)}>
-                            {task.favorite ? <Star /> : <StarBorderOutlined />}
+                        <div onClick={() => onToggleFavorite(tarefa.id)}>
+                            {tarefa.favorite ? <Star /> : <StarBorderOutlined />}
                         </div>
-                        <div onClick={() => onDelete(task.id)}>
+                        <div onClick={() => onDelete(tarefa.id)}>
                             <Delete />
                         </div>
                     </section>
@@ -36,4 +36,4 @@ const TaskList = ({ tasks, onToggleComplete, onToggleFavorite, onDelete }) => {
     );
 };
 
-export default TaskList;
+export default TarefaList;
