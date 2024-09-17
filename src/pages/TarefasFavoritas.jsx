@@ -18,9 +18,9 @@ const TarefasFavoritas = () => {
             <TarefaList
                 tarefas={tarefas}
                 setTarefas={setTarefas}
-                onToggleComplete={servicoTarefa.inverterCompleta}
-                onToggleFavorite={servicoTarefa.inverterFavorita}
-                onDelete={servicoTarefa.deletar}
+                aoMudarComplete={servicoTarefa.inverterCompleta}
+                aoMudarFavorite={servicoTarefa.inverterFavorita}
+                aoDeletar={servicoTarefa.deletar}
             />
         </div>
     );

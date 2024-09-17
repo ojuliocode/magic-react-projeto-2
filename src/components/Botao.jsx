@@ -15,7 +15,7 @@ function Botao(props) {
     }[props.nome];
 
     return (
-        <button className={props.isSelected ? 'btn-principal-selected' : 'btn-principal'} >
+        <button className={props.estaSelecionado ? 'btn-principal-selected' : 'btn-principal'} >
             {
                 props.rota ? <Link
                     style={{
