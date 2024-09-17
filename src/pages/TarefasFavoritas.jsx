@@ -9,7 +9,7 @@ const TarefasFavoritas = () => {
     
     useEffect(() => {
         const storedTarefas = servicoTarefa.getTarefas()
-        setTarefas(storedTarefas.filter(tarefa => tarefa.favorite));
+        setTarefas(storedTarefas.filter(tarefa => tarefa.favorita));
     }, []);
 
     return (

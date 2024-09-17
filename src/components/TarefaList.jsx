@@ -24,7 +24,7 @@ const TarefaList = ({ tarefas, onToggleComplete, onToggleFavorite, onDelete, set
                     </section>
                     <section className='actions'>
                         <div onClick={() => onToggleFavorite(tarefa.id, tarefas, setTarefas)}>
-                            {tarefa.favorite ? <Star /> : <StarBorderOutlined />}
+                            {tarefa.favorita ? <Star /> : <StarBorderOutlined />}
                         </div>
                         <div onClick={() => onDelete(tarefa.id, tarefas, setTarefas)}>
                             <Delete />

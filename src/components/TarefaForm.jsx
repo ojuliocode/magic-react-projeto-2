@@ -7,9 +7,9 @@ const TarefaForm = ({ onAddTarefa, tipo, tarefas, setTarefas }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (title.trim()) {
-            let tarefa = {title, completa: false, favorite: false}
+            let tarefa = {title, completa: false, favorita: false}
             if(tipo == 'completa') tarefa.completa = true ;
-            if(tipo == 'favorita') tarefa.favorite = true;
+            if(tipo == 'favorita') tarefa.favorita = true;
             onAddTarefa(tarefa, tarefas, setTarefas);
             setTitle('');
         }

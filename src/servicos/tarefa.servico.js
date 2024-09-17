@@ -23,12 +23,12 @@ export const inverterCompleta = (id, tarefas, setTarefas) => {
 
 export const inverterFavorita = (id, tarefas, setTarefas) => {
     const newTarefas = tarefas.map(tarefa =>
-        tarefa.id === id ? { ...tarefa, favorite: !tarefa.favorite } : tarefa
+        tarefa.id === id ? { ...tarefa, favorita: !tarefa.favorita } : tarefa
     )
     setTarefas(newTarefas);
     const todasAsTarefas = getTarefas()
     const todasAsTarefasComAFavoritaInvertida = todasAsTarefas.map(tarefa =>
-        tarefa.id === id ? { ...tarefa, favorite: !tarefa.favorite } : tarefa
+        tarefa.id === id ? { ...tarefa, favorita: !tarefa.favorita } : tarefa
     )
     localStorage.setItem('tarefas', JSON.stringify(todasAsTarefasComAFavoritaInvertida));
 };
