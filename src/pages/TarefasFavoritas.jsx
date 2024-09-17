@@ -4,17 +4,17 @@ import TarefaList from '../components/TarefaList';
 import TarefaForm from '../components/TarefaForm';
 import * as servicoTarefa from '../servicos/tarefa.servico';
 
-const CompletedTarefas = () => {
+const TarefasFavoritas = () => {
     const [tarefas, setTarefas] = useState([]);
     
     useEffect(() => {
         const storedTarefas = servicoTarefa.getTarefas()
-        setTarefas(storedTarefas.filter(tarefa => tarefa.completa));
+        setTarefas(storedTarefas.filter(tarefa => tarefa.favorite));
     }, []);
 
     return (
         <div className='tarefas'>
-            <TarefaForm tarefas={tarefas} setTarefas={setTarefas} tipo="completa" onAddTarefa={servicoTarefa.adicionar} />
+            <TarefaForm tarefas={tarefas} setTarefas={setTarefas} tipo="favorita" onAddTarefa={servicoTarefa.adicionar} />
             <TarefaList
                 tarefas={tarefas}
                 setTarefas={setTarefas}
@@ -26,4 +26,4 @@ const CompletedTarefas = () => {
     );
 };
 
-export default CompletedTarefas;
+export default TarefasFavoritas;
